@@ -185,7 +185,7 @@ section h2 {
 .filter-btn.active {
   background-color: var(--orange);
   border-color: var(--orange);
-  color: var(--white);
+  color: var(--navy);
 }
 
 /* 2-column grid from the smallest mobile size to avoid a single-column layout */
