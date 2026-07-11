@@ -1,0 +1,264 @@
+/* ===== Color and typography variables ===== */
+:root {
+  --navy: #0a1f44;
+  --navy-light: #16305f;
+  --orange: #ff6b1a;
+  --orange-light: #ffb088;
+  --bg: #f4f5f7;
+  --text: #1c1c1c;
+  --white: #ffffff;
+  --font-main: "Poppins", sans-serif;
+}
+
+/* ===== Basic reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--navy);
+  position: relative;
+}
+
+.logo {
+  border-radius: 50%;
+}
+
+.site-name {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-right: auto;
+}
+
+/* Hamburger button: only visible on small screens */
+#hamburger {
+  background: none;
+  border: 2px solid var(--orange);
+  border-radius: 4px;
+  width: 42px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#hamburger .bar {
+  width: 22px;
+  height: 3px;
+  background-color: var(--orange);
+  border-radius: 2px;
+}
+
+/* ===== Navigation (collapsed by default on mobile) ===== */
+nav {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+nav.open {
+  max-height: 300px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--white);
+  padding: 0.85rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--orange);
+  color: var(--navy);
+}
+
+nav ul li a.active {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main h1 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 4px solid var(--orange);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+section {
+  background-color: var(--white);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+.about-me p {
+  padding: 1rem;
+}
+
+.student-photo .photo {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+
+/* ===== Courses section ===== */
+.course-buttons {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1;
+  min-width: 90px;
+  padding: 0.6rem;
+  background-color: var(--bg);
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  color: var(--navy);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--navy-light);
+  color: var(--white);
+}
+
+.filter-btn.active {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+
+/* 2-column grid from the smallest mobile size to avoid a single-column layout */
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0 1rem 1rem;
+}
+
+.course-card {
+  background-color: var(--bg);
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.course-card.completed {
+  background-color: var(--orange-light);
+  border-color: var(--orange);
+}
+
+.course-card .course-title {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.course-card .course-name {
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.course-card .course-credits {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.total-credits {
+  padding: 0 1rem 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-links img {
+  filter: invert(63%) sepia(84%) saturate(1000%) hue-rotate(340deg);
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.15);
+}
+
+footer p {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}

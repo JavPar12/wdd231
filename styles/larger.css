@@ -1,0 +1,79 @@
+/* ===== Styles for large screens (tablet/desktop) ===== */
+@media screen and (min-width: 700px) {
+
+  header {
+    padding: 1.25rem 2rem;
+  }
+
+  #hamburger {
+    display: none; /* No hamburger icon needed on large screens */
+  }
+
+  nav {
+    width: auto;
+    max-height: none;
+    overflow: visible;
+    margin-left: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  nav ul li a {
+    border-top: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.1rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  main h1 {
+    font-size: 2.2rem;
+  }
+
+  /* About Me and Student Photo side by side, as shown in the desktop wireframe */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "about photo"
+      "courses courses";
+    column-gap: 1.5rem;
+  }
+
+  main h1 { grid-area: heading; }
+  .about-me { grid-area: about; }
+  .student-photo { grid-area: photo; }
+  .courses { grid-area: courses; }
+
+  .student-photo .photo {
+    height: 100%;
+    max-height: none;
+  }
+
+  .course-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .course-buttons {
+    max-width: 500px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .course-cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

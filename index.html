@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis | WDD 231</title>
+  <meta name="description" content="WDD 231 course home page for Luis, a Software Development student at BYU-Idaho.">
+  <meta name="author" content="Luis">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: small.css first (mobile-first), larger.css second (media queries) -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS: all deferred, each file has a single responsibility -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="Luis logo" class="logo" width="50" height="50">
+    <span class="site-name">Luis</span>
+    <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>
+        I'm Luis, a photographer and videographer running my own studio, ISO LIBRE,
+        based in Mexico City. I'm currently finishing a Bachelor's degree in Software
+        Development at BYU-Idaho while continuing to work on photography and video
+        projects. I'm interested in combining my creative background with web
+        development to build tools and sites that tell stories.
+      </p>
+    </section>
+
+    <section class="student-photo">
+      <h2>Student Photo</h2>
+      <img src="images/student-photo.jpeg" alt="Photo of Luis" class="photo">
+    </section>
+
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="course-buttons">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="CSE" class="filter-btn">CSE</button>
+        <button data-filter="WDD" class="filter-btn">WDD</button>
+      </div>
+      <div class="course-cards" id="courseCards">
+        <!-- Course cards are generated dynamically by course.js -->
+      </div>
+      <p class="total-credits">The total credits for course listed above is <span id="totalCredits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/JavPar12" target="_blank" aria-label="GitHub">
+        <img src="images/github.svg" alt="GitHub" width="28" height="28">
+      </a>
+      <a href="https://www.linkedin.com/in/luis-javier-pardo/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="28" height="28">
+      </a>
+      <a href="https://instagram.com/ursoypardo" target="_blank" aria-label="Instagram">
+        <img src="images/instagram.svg" alt="Instagram" width="28" height="28">
+      </a>
+    </div>
+    <p>&copy; <span id="currentYear"></span> Luis &bull; Mexico City, Mexico</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

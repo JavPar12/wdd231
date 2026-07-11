@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60" role="img" aria-label="Logo de Luis">
+  <circle cx="30" cy="30" r="28" fill="#0a1f44"/>
+  <circle cx="30" cy="30" r="28" fill="none" stroke="#ff6b1a" stroke-width="3"/>
+  <text x="30" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ff6b1a" text-anchor="middle">L</text>
+</svg>
