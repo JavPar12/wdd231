@@ -1,0 +1,42 @@
+/* ===== normalize.css =====
+   Minimal reset loaded before small.css, per the WDD 231 directory
+   page requirements. Removes inconsistent browser defaults only —
+   all real styling lives in small.css / larger.css. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}

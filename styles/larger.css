@@ -77,3 +77,47 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* ===== Chamber directory page ===== */
+@media screen and (min-width: 700px) {
+  .chamber-hero {
+    padding: 3rem 2rem;
+  }
+
+  .chamber-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .directory-section {
+    padding: 2rem;
+  }
+
+  #member-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #member-list.layout-list {
+    grid-template-columns: 1fr;
+  }
+
+  .chamber-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-dev {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #member-list.layout-list {
+    grid-template-columns: 1fr;
+  }
+}

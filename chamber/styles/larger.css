@@ -1,0 +1,68 @@
+/*
+  larger.css
+  Enhancements applied at wider viewports (min-width: 640px and 960px).
+  Keep small.css as the mobile-first source of truth; only override here.
+*/
+
+@media (min-width: 640px) {
+  .header-bar {
+    padding-bottom: var(--space-sm);
+  }
+
+  /* Nav becomes a horizontal bar and the toggle button is no longer needed */
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+    border-top: none;
+  }
+
+  .primary-nav a {
+    padding: var(--space-sm) 0;
+    border-bottom: none;
+  }
+
+  #member-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #member-list.layout-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .site-header,
+  .hero,
+  .site-footer {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  #member-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #member-list.layout-list {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card {
+    padding: var(--space-md) var(--space-md) var(--space-md);
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-meta {
+    border-top: none;
+    padding-top: 0;
+    text-align: right;
+  }
+}

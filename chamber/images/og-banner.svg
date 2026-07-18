@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Open Graph banner shown when the directory link is shared on social media -->
+  <rect width="1200" height="630" fill="#0B1F3A"/>
+  <circle cx="180" cy="315" r="140" fill="none" stroke="#FF6B1A" stroke-width="6"/>
+  <path d="M180 205 L262 275 L232 385 L128 385 L98 275 Z" fill="#FF6B1A" opacity="0.85"/>
+  <text x="400" y="290" font-family="'Space Grotesk', Arial, sans-serif" font-size="58" font-weight="700" fill="#F7F4EF">CDMX Creative</text>
+  <text x="400" y="360" font-family="'Space Grotesk', Arial, sans-serif" font-size="58" font-weight="700" fill="#FF6B1A">Business Chamber</text>
+  <text x="400" y="410" font-family="Inter, Arial, sans-serif" font-size="26" fill="#9AA5B1">Member Directory · Mexico City</text>
+</svg>

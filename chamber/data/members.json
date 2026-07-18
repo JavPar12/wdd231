@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Luz de Cobre Studio",
+      "address": "Calle Orizaba 145, Roma Norte, CDMX",
+      "phone": "(55) 4021-7789",
+      "website": "https://luzdecobre.example.com",
+      "image": "images/logos/logo-01.svg",
+      "membershipLevel": 3,
+      "category": "Photography Studio",
+      "tagline": "Portrait and product photography with a warm, editorial look."
+    },
+    {
+      "name": "Anden Films",
+      "address": "Av. Alvaro Obregon 88, Roma Sur, CDMX",
+      "phone": "(55) 3312-9045",
+      "website": "https://andenfilms.example.com",
+      "image": "images/logos/logo-02.svg",
+      "membershipLevel": 2,
+      "category": "Video Production",
+      "tagline": "Documentary-style video for brands, events, and short films."
+    },
+    {
+      "name": "Trazo Nocturno Design",
+      "address": "Calle Coahuila 210, Condesa, CDMX",
+      "phone": "(55) 2904-6631",
+      "website": "https://trazonocturno.example.com",
+      "image": "images/logos/logo-03.svg",
+      "membershipLevel": 1,
+      "category": "Graphic Design",
+      "tagline": "Brand identity and print design for independent creators."
+    },
+    {
+      "name": "Cuadro Vivo Cinematics",
+      "address": "Calle Tonala 55, Roma Norte, CDMX",
+      "phone": "(55) 4488-2213",
+      "website": "https://cuadrovivo.example.com",
+      "image": "images/logos/logo-04.svg",
+      "membershipLevel": 3,
+      "category": "Drone & Aerial Video",
+      "tagline": "Aerial cinematography and gimbal work for real estate and events."
+    },
+    {
+      "name": "Papel y Sombra Editorial",
+      "address": "Calle Merida 167, Roma Norte, CDMX",
+      "phone": "(55) 5567-3390",
+      "website": "https://papelysombra.example.com",
+      "image": "images/logos/logo-05.svg",
+      "membershipLevel": 1,
+      "category": "Editorial & Copywriting",
+      "tagline": "Long-form storytelling, captions, and editorial content."
+    },
+    {
+      "name": "Ritmo Urbano Audio",
+      "address": "Calle Zacatecas 82, Roma Norte, CDMX",
+      "phone": "(55) 3765-4402",
+      "website": "https://ritmourbano.example.com",
+      "image": "images/logos/logo-06.svg",
+      "membershipLevel": 2,
+      "category": "Music & Sound Production",
+      "tagline": "Original scoring and sound design for video and podcasts."
+    },
+    {
+      "name": "Marco Abierto Galeria",
+      "address": "Calle Colima 199, Roma Norte, CDMX",
+      "phone": "(55) 2298-6675",
+      "website": "https://marcoabierto.example.com",
+      "image": "images/logos/logo-07.svg",
+      "membershipLevel": 3,
+      "category": "Gallery & Exhibition Space",
+      "tagline": "A gallery space for emerging photographers and visual artists."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Member Directory | CDMX Creative Business Chamber</title>
+  <meta name="description" content="Browse member businesses of the CDMX Creative Business Chamber, a community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
+  <meta name="author" content="Luis Pardo">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Facebook / Open Graph sharing metadata -->
+  <meta property="og:title" content="Member Directory | CDMX Creative Business Chamber">
+  <meta property="og:description" content="A community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
+  <meta property="og:image" content="images/og-banner.svg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (data/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets: normalize first, then mobile-first base, then larger-viewport enhancements -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <script src="js/directory.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="" class="brand__mark" width="34" height="34">
+        <span class="brand__text">CDMX Creative<span>Business Chamber</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+    </div>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Member Directory</p>
+        <h1>The businesses building Mexico City's creative scene.</h1>
+        <p>From photography studios to sound designers, these are the member businesses of the CDMX Creative Business Chamber — vetted, local, and ready to work with you.</p>
+      </div>
+    </section>
+
+    <section class="directory-section">
+      <div class="directory-heading">
+        <h2>Member businesses</h2>
+        <p id="member-count" class="member-count" aria-live="polite">Loading…</p>
+      </div>
+
+      <div class="view-toggle" role="group" aria-label="Directory layout">
+        <button id="view-grid" type="button" aria-pressed="true">Grid</button>
+        <button id="view-list" type="button" aria-pressed="false">List</button>
+      </div>
+
+      <div id="member-list" aria-live="polite">
+        <p class="state-message">Loading member directory…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <h2>CDMX Creative Business Chamber</h2>
+        <p>Calle Merida 120, Roma Norte, Mexico City, CDMX</p>
+        <p>(55) 4000-1122</p>
+        <p><a href="mailto:contact@cdmxcreativechamber.com">contact@cdmxcreativechamber.com</a></p>
+        <div class="social-links">
+          <a href="https://instagram.com/ursoypardo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/luis-javier-pardo/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Luis Pardo &middot; WDD 231</p>
+        <p>&copy; <span id="current-year"></span> CDMX Creative Business Chamber</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+/*
+  small.css
+  Mobile-first base styles for the CDMX Creative Business Chamber.
+  Loaded after normalize.css. Enhanced by larger.css at wider viewports.
+  Author: Luis Pardo — WDD 231
+*/
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Brand colors */
+  --navy: #0b1f3a;
+  --navy-soft: #16273f;
+  --orange: #ff6b1a;
+  --cream: #f7f4ef;
+  --ink: #16202e;
+  --slate: #5b6b82;
+
+  /* Membership tier accents (echo the aperture-ring logo marks) */
+  --tier-gold: #d9a441;
+  --tier-silver: #9aa5b1;
+  --tier-member: #b85c38;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.75rem;
+  --space-lg: 3rem;
+  --space-xl: 4.5rem;
+
+  --radius: 10px;
+  --max-width: 1180px;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background-color: var(--navy);
+  color: var(--cream);
+  padding: var(--space-sm) var(--space-sm) 0;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-bottom: var(--space-sm);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand__mark {
+  width: 34px;
+  height: 34px;
+}
+
+.brand__text {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.brand__text span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--orange);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Mobile nav toggle button (hidden nav expands beneath the header bar) */
+.nav-toggle {
+  display: block;
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(247, 244, 239, 0.35);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.primary-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.primary-nav ul {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid rgba(247, 244, 239, 0.15);
+}
+
+.primary-nav.is-open ul {
+  display: flex;
+}
+
+.primary-nav a {
+  display: block;
+  padding: var(--space-sm) 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cream);
+  border-bottom: 1px solid rgba(247, 244, 239, 0.1);
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--orange);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background-color: var(--navy);
+  color: var(--cream);
+  padding: var(--space-lg) var(--space-sm) var(--space-xl);
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: var(--space-xs);
+}
+
+.hero h1 {
+  color: var(--cream);
+  font-size: clamp(1.9rem, 6vw, 3rem);
+  max-width: 18ch;
+}
+
+.hero p {
+  margin-top: var(--space-sm);
+  max-width: 52ch;
+  color: #cfd6e2;
+  font-size: 1.05rem;
+}
+
+/* ---------- Directory controls ---------- */
+.directory-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.directory-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.directory-heading h2 {
+  font-size: 1.6rem;
+}
+
+.member-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.view-toggle button {
+  padding: 0.5rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background-color: transparent;
+}
+
+.view-toggle button[aria-pressed="true"] {
+  background-color: var(--navy);
+  color: var(--cream);
+}
+
+/* ---------- Member list/grid ---------- */
+#member-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+#member-list.layout-list {
+  grid-template-columns: 1fr;
+}
+
+.member-card {
+  background-color: #fff;
+  border: 1px solid #e6e1d6;
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+#member-list.layout-list .member-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.member-card__logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.member-card__body {
+  flex: 1;
+}
+
+.member-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.member-card h3 {
+  font-size: 1.15rem;
+}
+
+.member-card__category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 0.15rem;
+}
+
+.member-card__tagline {
+  color: var(--ink);
+  font-size: 0.92rem;
+  margin-top: var(--space-xs);
+}
+
+.member-card__meta {
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--slate);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.member-card__meta a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* Membership tier badge — echoes the aperture-ring logo motif */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.badge--gold {
+  background-color: var(--tier-gold);
+}
+
+.badge--silver {
+  background-color: var(--tier-silver);
+  color: var(--ink);
+}
+
+.badge--member {
+  background-color: var(--tier-member);
+}
+
+/* ---------- Loading / error states ---------- */
+.state-message {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--slate);
+  padding: var(--space-md) 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: var(--navy);
+  color: #cfd6e2;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-inner h2 {
+  color: var(--cream);
+  font-size: 1.1rem;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.footer-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #8b96a8;
+  border-top: 1px solid rgba(247, 244, 239, 0.15);
+  padding-top: var(--space-sm);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.social-links a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--orange);
+  border: 1px solid rgba(255, 107, 26, 0.4);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="AF logo">
+  <!-- Business logo: stylized camera-aperture mark with initials, brand accent color -->
+  <circle cx="60" cy="60" r="56" fill="#F7F4EF" stroke="#0B1F3A" stroke-width="2"/>
+  <path d="M106.0,60.0 L79.4,64.9 A20.0,20.0 0 0,1 79.1,66.0 L99.1,84.3 A46.0,46.0 0 0,0 106.0,60.0 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M88.7,96.0 L68.2,78.2 A20.0,20.0 0 0,1 67.2,78.7 L65.4,105.7 A46.0,46.0 0 0,0 88.7,96.0 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M49.8,104.8 L50.9,77.8 A20.0,20.0 0 0,1 49.9,77.2 L27.6,92.7 A46.0,46.0 0 0,0 49.8,104.8 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M18.6,80.0 L40.4,63.9 A20.0,20.0 0 0,1 40.2,62.8 L14.3,55.1 A46.0,46.0 0 0,0 18.6,80.0 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M18.6,40.0 L44.7,47.1 A20.0,20.0 0 0,1 45.4,46.3 L35.4,21.2 A46.0,46.0 0 0,0 18.6,40.0 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M49.8,15.2 L60.5,40.0 A20.0,20.0 0 0,1 61.6,40.1 L75.0,16.5 A46.0,46.0 0 0,0 49.8,15.2 Z" fill="#0B1F3A" opacity="0.85"/>
+  <path d="M88.7,24.0 L76.0,47.9 A20.0,20.0 0 0,1 76.6,48.9 L103.4,44.6 A46.0,46.0 0 0,0 88.7,24.0 Z" fill="#0B1F3A" opacity="0.85"/>
+  <circle cx="60" cy="60" r="19" fill="#0B1F3A"/>
+  <text x="60" y="66" font-family="'Space Grotesk', Arial, sans-serif" font-size="16" font-weight="700" fill="#F7F4EF" text-anchor="middle">AF</text>
+</svg>

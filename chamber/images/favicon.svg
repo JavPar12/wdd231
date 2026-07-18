@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Favicon: simplified aperture mark in chamber navy/orange -->
+  <circle cx="16" cy="16" r="15" fill="#0B1F3A"/>
+  <path d="M16 6 L23 12 L20 22 L12 22 L9 12 Z" fill="#FF6B1A"/>
+  <circle cx="16" cy="16" r="5" fill="#0B1F3A"/>
+</svg>
