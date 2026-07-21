@@ -402,3 +402,168 @@ button:focus-visible {
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
 }
+
+/* =========================================================
+   Home page (index.html)
+   ========================================================= */
+
+/* ----- Hero ----- */
+.home-hero {
+  position: relative;
+  color: var(--cream);
+}
+
+.home-hero__image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.home-hero__overlay {
+  background-color: var(--navy);
+  padding: var(--space-md) var(--space-sm) var(--space-lg);
+}
+
+.home-hero__overlay h1 {
+  color: var(--cream);
+  font-size: clamp(1.7rem, 6vw, 2.6rem);
+  max-width: 22ch;
+}
+
+.home-hero__overlay p {
+  margin-top: var(--space-sm);
+  max-width: 50ch;
+  color: #cfd6e2;
+  font-size: 1rem;
+}
+
+/* Call to action button */
+.cta-button {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 0.8rem 1.6rem;
+  background-color: var(--orange);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 999px;
+}
+
+.cta-button:hover {
+  background-color: #ffb088;
+}
+
+/* ----- Shared section wrapper ----- */
+.home-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.home-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.home-section--alt {
+  background-color: #efe9dc;
+}
+
+/* ----- Current events ----- */
+.events-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.event-card {
+  background-color: #fff;
+  border-left: 4px solid var(--orange);
+  border-radius: 6px;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.event-card__date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.event-card h3 {
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+}
+
+.event-card p {
+  font-size: 0.9rem;
+  color: var(--slate);
+  margin-top: 0.3rem;
+}
+
+/* ----- Weather ----- */
+.weather-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.weather-current {
+  background-color: var(--navy);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.weather-current__temp {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.weather-current__desc {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  color: var(--orange);
+  margin-top: 0.25rem;
+}
+
+.weather-forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.forecast-day {
+  background-color: #fff;
+  border: 1px solid #e6e1d6;
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.forecast-day__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.forecast-day__temp {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-top: 0.3rem;
+}
+
+/* ----- Spotlights (reuses .member-card / .badge from the directory page) ----- */
+.spotlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}

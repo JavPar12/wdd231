@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700" role="img" aria-label="Illustration of Mexico City skyline with a camera aperture motif">
+  <!-- Hero illustration: CDMX skyline silhouette + aperture motif, brand navy/orange/cream -->
+  <rect width="1400" height="700" fill="#0b1f3a"/>
+
+  <!-- Soft radial glow behind the aperture -->
+  <circle cx="1050" cy="260" r="260" fill="#16273f"/>
+
+  <!-- Aperture ring (large, echoes the chamber's logo motif) -->
+  <g opacity="0.9">
+    <circle cx="1050" cy="260" r="170" fill="none" stroke="#ff6b1a" stroke-width="4"/>
+    <path d="M1050 120 L1150 190 L1112 320 L988 320 L950 190 Z" fill="#ff6b1a" opacity="0.5"/>
+  </g>
+
+  <!-- City skyline silhouette -->
+  <g fill="#122a4d">
+    <rect x="0" y="480" width="90" height="220"/>
+    <rect x="95" y="420" width="70" height="280"/>
+    <rect x="170" y="500" width="110" height="200"/>
+    <rect x="285" y="380" width="60" height="320"/>
+    <rect x="350" y="460" width="90" height="240"/>
+    <rect x="445" y="410" width="75" height="290"/>
+    <rect x="525" y="500" width="100" height="200"/>
+    <rect x="630" y="440" width="65" height="260"/>
+    <rect x="700" y="360" width="80" height="340"/>
+    <rect x="785" y="480" width="95" height="220"/>
+    <rect x="885" y="430" width="70" height="270"/>
+    <rect x="960" y="500" width="110" height="200"/>
+    <rect x="1075" y="450" width="80" height="250"/>
+    <rect x="1160" y="500" width="100" height="200"/>
+    <rect x="1265" y="420" width="70" height="280"/>
+    <rect x="1340" y="480" width="60" height="220"/>
+  </g>
+
+  <!-- Window lights -->
+  <g fill="#ff6b1a" opacity="0.55">
+    <rect x="20" y="510" width="8" height="8"/>
+    <rect x="45" y="540" width="8" height="8"/>
+    <rect x="115" y="460" width="8" height="8"/>
+    <rect x="140" y="500" width="8" height="8"/>
+    <rect x="305" y="420" width="8" height="8"/>
+    <rect x="305" y="460" width="8" height="8"/>
+    <rect x="465" y="450" width="8" height="8"/>
+    <rect x="720" y="400" width="8" height="8"/>
+    <rect x="720" y="440" width="8" height="8"/>
+    <rect x="900" y="470" width="8" height="8"/>
+    <rect x="1095" y="490" width="8" height="8"/>
+    <rect x="1285" y="460" width="8" height="8"/>
+  </g>
+
+  <!-- Ground line -->
+  <rect x="0" y="695" width="1400" height="5" fill="#ff6b1a" opacity="0.4"/>
+</svg>

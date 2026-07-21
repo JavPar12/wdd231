@@ -65,4 +65,31 @@
     padding-top: 0;
     text-align: right;
   }
+
+  /* ----- Home page: switch stacked mobile layouts to grids ----- */
+  .home-hero__image {
+    height: 420px;
+  }
+
+  .home-hero__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(11, 31, 58, 0.95) 30%, rgba(11, 31, 58, 0));
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  }
+
+  .events-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weather-wrapper {
+    grid-template-columns: 1fr 2fr;
+    align-items: stretch;
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

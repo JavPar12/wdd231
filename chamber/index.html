@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Member Directory | CDMX Creative Business Chamber</title>
-  <meta name="description" content="Browse member businesses of the CDMX Creative Business Chamber, a community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
+  <title>Home | CDMX Creative Business Chamber</title>
+  <meta name="description" content="Home page of the CDMX Creative Business Chamber: current events, local weather, and spotlighted member businesses in Mexico City.">
   <meta name="author" content="Luis Pardo">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Facebook / Open Graph sharing metadata -->
-  <meta property="og:title" content="Member Directory | CDMX Creative Business Chamber">
+  <meta property="og:title" content="CDMX Creative Business Chamber">
   <meta property="og:description" content="A community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
   <meta property="og:image" content="https://javpar12.github.io/wdd231/chamber/images/og-banner.png">
-  <meta property="og:url" content="https://javpar12.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://javpar12.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
 
   <!-- Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (data/labels) -->
@@ -30,7 +30,8 @@
 
   <script src="js/navigation.js" defer></script>
   <script src="js/date.js" defer></script>
-  <script src="js/directory.js" defer></script>
+  <script src="js/weather.js" defer></script>
+  <script src="js/spotlights.js" defer></script>
 </head>
 <body>
 
@@ -46,8 +47,8 @@
     </div>
     <nav id="primary-nav" class="primary-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="discover.html">Discover</a></li>
       </ul>
@@ -55,27 +56,57 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Member Directory</p>
-        <h1>The businesses building Mexico City's creative scene.</h1>
-        <p>From photography studios to sound designers, these are the member businesses of the CDMX Creative Business Chamber — vetted, local, and ready to work with you.</p>
+    <!-- Hero -->
+    <section class="home-hero">
+      <img src="images/hero-banner.svg" alt="Illustration of the Mexico City skyline with a camera aperture motif" class="home-hero__image">
+      <div class="home-hero__overlay">
+        <h1>Mexico City's creative businesses, in one place.</h1>
+        <p>The CDMX Creative Business Chamber connects photographers, filmmakers, designers, and audio artists with the clients and collaborators who need them.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
       </div>
     </section>
 
-    <section class="directory-section">
-      <div class="directory-heading">
-        <h2>Member businesses</h2>
-        <p id="member-count" class="member-count" aria-live="polite">Loading…</p>
+    <!-- Current events -->
+    <section class="home-section">
+      <h2>Current Events</h2>
+      <div class="events-list">
+        <article class="event-card">
+          <p class="event-card__date">Aug 14, 2026</p>
+          <h3>Member Networking Night</h3>
+          <p>An evening mixer for chamber members at Galeria Marco Abierto, Roma Norte.</p>
+        </article>
+        <article class="event-card">
+          <p class="event-card__date">Aug 28, 2026</p>
+          <h3>Portfolio Review Workshop</h3>
+          <p>Gold members offer free portfolio reviews for new and aspiring creatives.</p>
+        </article>
+        <article class="event-card">
+          <p class="event-card__date">Sep 10, 2026</p>
+          <h3>Chamber Open House</h3>
+          <p>Meet the board, tour member studios, and learn about membership tiers.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="view-toggle" role="group" aria-label="Directory layout">
-        <button id="view-grid" type="button" aria-pressed="true">Grid</button>
-        <button id="view-list" type="button" aria-pressed="false">List</button>
+    <!-- Weather -->
+    <section class="home-section home-section--alt">
+      <h2>Mexico City Weather</h2>
+      <div class="weather-wrapper">
+        <div class="weather-current">
+          <p id="current-temp" class="weather-current__temp">--</p>
+          <p id="current-desc" class="weather-current__desc">Loading weather…</p>
+        </div>
+        <div id="forecast-cards" class="weather-forecast">
+          <p class="state-message">Loading forecast…</p>
+        </div>
       </div>
+    </section>
 
-      <div id="member-list" aria-live="polite">
-        <p class="state-message">Loading member directory…</p>
+    <!-- Member spotlights -->
+    <section class="home-section">
+      <h2>Member Spotlights</h2>
+      <div id="spotlights-grid" class="spotlights-grid">
+        <p class="state-message">Loading spotlights…</p>
       </div>
     </section>
   </main>

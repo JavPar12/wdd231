@@ -1,8 +1,8 @@
 /*
   directory.js
-  Loads member data from data/members.json and renders it as either a
-  grid of cards or a one-column list. Also handles the mobile nav toggle
-  and the auto-generated footer dates.
+  Chamber directory page only. Loads member data from data/members.json
+  and renders it as either a grid of cards or a one-column list.
+  Nav toggle and footer dates live in navigation.js / date.js.
   Author: Luis Pardo — WDD 231
 */
 
@@ -89,19 +89,5 @@ function setView(view) {
 
 GRID_BUTTON.addEventListener("click", () => setView("grid"));
 LIST_BUTTON.addEventListener("click", () => setView("list"));
-
-// Mobile navigation toggle: expands/collapses the nav list under the header.
-const navToggle = document.querySelector("#nav-toggle");
-const primaryNav = document.querySelector("#primary-nav");
-
-navToggle.addEventListener("click", () => {
-  const isOpen = primaryNav.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-// Auto-generated footer info: current year and this document's last
-// modification date, both pulled straight from the browser.
-document.querySelector("#current-year").textContent = new Date().getFullYear();
-document.querySelector("#last-modified").textContent = document.lastModified;
 
 loadMembers();
