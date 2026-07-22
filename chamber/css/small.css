@@ -567,3 +567,239 @@ button:focus-visible {
   grid-template-columns: 1fr;
   gap: var(--space-md);
 }
+
+/* =========================================================
+   Join page (join.html)
+   ========================================================= */
+
+.join-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.join-layout h1 {
+  font-size: 1.7rem;
+  margin-bottom: var(--space-xs);
+}
+
+.join-intro {
+  color: var(--slate);
+  max-width: 60ch;
+  margin-bottom: var(--space-md);
+  grid-column: 1 / -1;
+}
+
+/* ----- Form ----- */
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  background-color: #fff;
+  border: 1px solid #e6e1d6;
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--navy);
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  border: 1px solid #cfc9ba;
+  border-radius: 6px;
+  padding: 0.6rem 0.7rem;
+}
+
+.join-form input:invalid:not(:placeholder-shown) {
+  border-color: #c0392b;
+}
+
+.join-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.join-form .field-hint {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--slate);
+  font-weight: 400;
+}
+
+.submit-button {
+  align-self: flex-start;
+  background-color: var(--orange);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #ffb088;
+}
+
+/* ----- Membership cards ----- */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.membership-card {
+  background-color: var(--navy);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: cardFadeUp 0.5s ease forwards;
+}
+
+.membership-card:nth-child(1) { animation-delay: 0.05s; }
+.membership-card:nth-child(2) { animation-delay: 0.2s; }
+.membership-card:nth-child(3) { animation-delay: 0.35s; }
+.membership-card:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.membership-card h3 {
+  color: var(--cream);
+  font-size: 1.1rem;
+}
+
+.membership-card p {
+  font-size: 0.85rem;
+  color: #cfd6e2;
+  margin-top: 0.3rem;
+}
+
+.membership-card__link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
+
+/* ----- Modals (native <dialog>) ----- */
+dialog.benefit-modal {
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  max-width: 420px;
+  width: 90%;
+  color: var(--ink);
+}
+
+dialog.benefit-modal::backdrop {
+  background-color: rgba(11, 31, 58, 0.6);
+}
+
+dialog.benefit-modal h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+dialog.benefit-modal ul {
+  margin: var(--space-sm) 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+dialog.benefit-modal li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.modal-close {
+  margin-top: var(--space-sm);
+  background-color: var(--navy);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   Thank you page (thankyou.html)
+   ========================================================= */
+
+.thankyou-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.thankyou-section h1 {
+  font-size: 1.7rem;
+}
+
+.thankyou-section > p {
+  color: var(--slate);
+  margin-top: 0.4rem;
+  margin-bottom: var(--space-md);
+}
+
+.summary-card {
+  background-color: #fff;
+  border: 1px solid #e6e1d6;
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #efe9dc;
+  font-size: 0.92rem;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.summary-row__value {
+  color: var(--ink);
+  font-weight: 600;
+  text-align: right;
+}

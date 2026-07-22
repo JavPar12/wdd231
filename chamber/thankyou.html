@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Member Directory | CDMX Creative Business Chamber</title>
-  <meta name="description" content="Browse member businesses of the CDMX Creative Business Chamber, a community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
+  <title>Thank You | CDMX Creative Business Chamber</title>
+  <meta name="description" content="Confirmation page after submitting a membership application to the CDMX Creative Business Chamber.">
   <meta name="author" content="Luis Pardo">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Facebook / Open Graph sharing metadata -->
-  <meta property="og:title" content="Member Directory | CDMX Creative Business Chamber">
-  <meta property="og:description" content="A community of photographers, filmmakers, designers, and audio artists based in Mexico City.">
+  <meta property="og:title" content="Thank You | CDMX Creative Business Chamber">
+  <meta property="og:description" content="Confirmation page for chamber membership applications.">
   <meta property="og:image" content="https://javpar12.github.io/wdd231/chamber/images/og-banner.png">
-  <meta property="og:url" content="https://javpar12.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://javpar12.github.io/wdd231/chamber/thankyou.html">
   <meta property="og:type" content="website">
 
   <!-- Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (data/labels) -->
@@ -30,7 +30,7 @@
 
   <script src="js/navigation.js" defer></script>
   <script src="js/date.js" defer></script>
-  <script src="js/directory.js" defer></script>
+  <script src="js/thankyou.js" defer></script>
 </head>
 <body>
 
@@ -47,7 +47,7 @@
     <nav id="primary-nav" class="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="discover.html">Discover</a></li>
       </ul>
@@ -55,27 +55,35 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Member Directory</p>
-        <h1>The businesses building Mexico City's creative scene.</h1>
-        <p>From photography studios to sound designers, these are the member businesses of the CDMX Creative Business Chamber — vetted, local, and ready to work with you.</p>
-      </div>
-    </section>
+    <section class="thankyou-section">
+      <h1>Thank you for applying!</h1>
+      <p>We received your membership application. Here's a summary of what you submitted:</p>
 
-    <section class="directory-section">
-      <div class="directory-heading">
-        <h2>Member businesses</h2>
-        <p id="member-count" class="member-count" aria-live="polite">Loading…</p>
-      </div>
-
-      <div class="view-toggle" role="group" aria-label="Directory layout">
-        <button id="view-grid" type="button" aria-pressed="true">Grid</button>
-        <button id="view-list" type="button" aria-pressed="false">List</button>
-      </div>
-
-      <div id="member-list" aria-live="polite">
-        <p class="state-message">Loading member directory…</p>
+      <div class="summary-card">
+        <div class="summary-row">
+          <span class="summary-row__label">First Name</span>
+          <span id="summary-first-name" class="summary-row__value"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row__label">Last Name</span>
+          <span id="summary-last-name" class="summary-row__value"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row__label">Email</span>
+          <span id="summary-email" class="summary-row__value"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row__label">Mobile Phone</span>
+          <span id="summary-phone" class="summary-row__value"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row__label">Business Name</span>
+          <span id="summary-business" class="summary-row__value"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row__label">Submitted On</span>
+          <span id="summary-timestamp" class="summary-row__value"></span>
+        </div>
       </div>
     </section>
   </main>

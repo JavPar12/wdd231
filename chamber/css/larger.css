@@ -92,4 +92,10 @@
   .spotlights-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* ----- Join page: form on the left, membership cards on the right ----- */
+  .join-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
 }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Join | CDMX Creative Business Chamber</title>
+  <meta name="description" content="Apply to join the CDMX Creative Business Chamber and choose the membership level that fits your creative business.">
+  <meta name="author" content="Luis Pardo">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Facebook / Open Graph sharing metadata -->
+  <meta property="og:title" content="Join | CDMX Creative Business Chamber">
+  <meta property="og:description" content="Apply to join a community of photographers, filmmakers, designers, and audio artists in Mexico City.">
+  <meta property="og:image" content="https://javpar12.github.io/wdd231/chamber/images/og-banner.png">
+  <meta property="og:url" content="https://javpar12.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Space Grotesk (display), Inter (body), IBM Plex Mono (data/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets: normalize first, then mobile-first base, then larger-viewport enhancements -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/join.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="" class="brand__mark" width="34" height="34">
+        <span class="brand__text">CDMX Creative<span>Business Chamber</span></span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+    </div>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="join-layout">
+      <h1>Join the CDMX Creative Business Chamber</h1>
+      <p class="join-intro">Fill out the application below to start the process. Membership connects you with clients, collaborators, and a community of creative professionals across Mexico City.</p>
+
+      <!-- Membership application form -->
+      <form class="join-form" method="get" action="thankyou.html">
+
+        <label for="first-name">
+          First Name
+          <input
+            type="text"
+            id="first-name"
+            name="firstName"
+            title="Enter your first name"
+            autocomplete="given-name"
+            required
+          >
+        </label>
+
+        <label for="last-name">
+          Last Name
+          <input
+            type="text"
+            id="last-name"
+            name="lastName"
+            title="Enter your last name"
+            autocomplete="family-name"
+            required
+          >
+        </label>
+
+        <label for="org-title">
+          Organizational Title
+          <input
+            type="text"
+            id="org-title"
+            name="orgTitle"
+            title="Enter your job title within your organization"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\-\s]{7,}"
+          >
+          <span class="field-hint">Letters, hyphens, and spaces only — at least 7 characters.</span>
+        </label>
+
+        <label for="email">
+          Email Address
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Enter your email address"
+            autocomplete="email"
+            placeholder="name@example.com"
+            required
+          >
+        </label>
+
+        <label for="mobile-phone">
+          Mobile Phone Number
+          <input
+            type="tel"
+            id="mobile-phone"
+            name="mobilePhone"
+            title="Enter your mobile phone number"
+            autocomplete="tel"
+            required
+          >
+        </label>
+
+        <label for="business-name">
+          Business/Organization Name
+          <input
+            type="text"
+            id="business-name"
+            name="businessName"
+            title="Enter your business or organization name"
+            autocomplete="organization"
+            required
+          >
+        </label>
+
+        <label for="membership-level">
+          Membership Level
+          <select id="membership-level" name="membershipLevel" title="Select a membership level" required>
+            <option value="">Select a level&hellip;</option>
+            <option value="np">NP Membership (non-profit, no fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label for="business-description">
+          Business/Organization Description
+          <textarea
+            id="business-description"
+            name="businessDescription"
+            title="Briefly describe your business or organization"
+          ></textarea>
+        </label>
+
+        <!-- Hidden timestamp: filled in by join.js when the page loads -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <input type="submit" value="Submit Application" class="submit-button">
+      </form>
+
+      <!-- Membership level cards -->
+      <div class="membership-cards">
+        <article class="membership-card">
+          <h3>NP Membership</h3>
+          <p>For registered non-profit organizations. No membership fee.</p>
+          <a href="#" class="membership-card__link" data-modal-target="#modal-np">Learn more &rarr;</a>
+        </article>
+
+        <article class="membership-card">
+          <h3>Bronze Membership</h3>
+          <p>Entry-level membership for independent creatives and small studios.</p>
+          <a href="#" class="membership-card__link" data-modal-target="#modal-bronze">Learn more &rarr;</a>
+        </article>
+
+        <article class="membership-card">
+          <h3>Silver Membership</h3>
+          <p>Includes directory spotlight eligibility and event discounts.</p>
+          <a href="#" class="membership-card__link" data-modal-target="#modal-silver">Learn more &rarr;</a>
+        </article>
+
+        <article class="membership-card">
+          <h3>Gold Membership</h3>
+          <p>Our top tier: maximum visibility, training, and advertising benefits.</p>
+          <a href="#" class="membership-card__link" data-modal-target="#modal-gold">Learn more &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <h2>CDMX Creative Business Chamber</h2>
+        <p>Calle Merida 120, Roma Norte, Mexico City, CDMX</p>
+        <p>(55) 4000-1122</p>
+        <p><a href="mailto:contact@cdmxcreativechamber.example.com">contact@cdmxcreativechamber.example.com</a></p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Luis Pardo &middot; WDD 231</p>
+        <p>&copy; <span id="current-year"></span> CDMX Creative Business Chamber</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Benefit modals: one per membership level -->
+  <dialog id="modal-np" class="benefit-modal">
+    <h2>NP Membership</h2>
+    <p>Free membership for registered non-profit organizations serving the creative community.</p>
+    <ul>
+      <li>Listing in the member directory</li>
+      <li>Invitations to chamber networking events</li>
+      <li>Access to the community discussion board</li>
+    </ul>
+    <button class="modal-close" type="button">Close</button>
+  </dialog>
+
+  <dialog id="modal-bronze" class="benefit-modal">
+    <h2>Bronze Membership</h2>
+    <p>An affordable starting point for independent creatives.</p>
+    <ul>
+      <li>Everything in NP Membership</li>
+      <li>Directory listing with contact info and logo</li>
+      <li>Discounted tickets to chamber workshops</li>
+    </ul>
+    <button class="modal-close" type="button">Close</button>
+  </dialog>
+
+  <dialog id="modal-silver" class="benefit-modal">
+    <h2>Silver Membership</h2>
+    <p>For growing studios ready for more visibility.</p>
+    <ul>
+      <li>Everything in Bronze Membership</li>
+      <li>Eligibility for home page "Member Spotlight" rotation</li>
+      <li>One free training workshop per year</li>
+      <li>Priority booth placement at chamber events</li>
+    </ul>
+    <button class="modal-close" type="button">Close</button>
+  </dialog>
+
+  <dialog id="modal-gold" class="benefit-modal">
+    <h2>Gold Membership</h2>
+    <p>Our top tier, for businesses that want maximum exposure.</p>
+    <ul>
+      <li>Everything in Silver Membership</li>
+      <li>Higher priority in the Member Spotlight rotation</li>
+      <li>Featured placement in the chamber newsletter</li>
+      <li>Unlimited training workshops</li>
+      <li>Free booth at the annual Chamber Open House</li>
+    </ul>
+    <button class="modal-close" type="button">Close</button>
+  </dialog>
+
+</body>
+</html>
